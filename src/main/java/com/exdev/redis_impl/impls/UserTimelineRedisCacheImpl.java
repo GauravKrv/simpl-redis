@@ -27,13 +27,6 @@ public class UserTimelineRedisCacheImpl implements RedisCacheInterface<UserTimel
         return CacheConstants.USER_TIMELINE_CACHE;
     }
 
-    /**
-     * Fetch cached data for the given cache name and key.
-     *
-     * @param cacheName the name of the cache (e.g., "customerTimelineCache")
-     * @param cacheKey      the cache key
-     * @return Cached data or null if not present
-     */
     public Object fetchCachedData(String cacheName, String cacheKey) {
         // Construct the full Redis key
         String fullKey = cacheName + "::" + cacheKey;
